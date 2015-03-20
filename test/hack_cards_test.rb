@@ -45,8 +45,8 @@ class HackCardsTest < Test::Unit::TestCase
     assert_equal [:text, :url], card.components
   end
 
-  def test_to_html
+  def test_display_only_text
     card = HackCards::Card.new(text: "paragraph")
-    assert_equal "<p>paragraph</p>", card.to_html
+    assert_equal "<p>paragraph</p>", card.display
   end
 end

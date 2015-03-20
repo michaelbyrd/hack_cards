@@ -22,8 +22,26 @@ module HackCards
       string[1..-1].to_sym
     end
 
-    def to_html
+    def display
+      if type == :text
+        return text_partial
+      elsif type == :url
+        return url_partial
+      elsif type == :text_url
+        return text_url_partial
+      end
+    end
+
+    def text_partial
       "<p>#{text}</p>"
+    end
+
+    def url_partial
+      # TODO url partial
+    end
+
+    def text_url_partial
+      # TODO text url partial
     end
   end
 end
