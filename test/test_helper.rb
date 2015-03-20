@@ -1,2 +1,2 @@
 require "test/unit"
-require "cards.rb"
+require "hack_cards.rb"

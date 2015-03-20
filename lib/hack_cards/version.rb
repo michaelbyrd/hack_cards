@@ -1,3 +1,3 @@
-module Cards
+module HackCards
   VERSION = "0.0.1"
 end

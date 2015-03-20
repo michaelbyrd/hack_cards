@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'cards/version'
+require 'hack_cards/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cards"
-  spec.version       = Cards::VERSION
+  spec.name          = "hack_cards"
+  spec.version       = HackCards::VERSION
   spec.authors       = ["MichaelByrd"]
   spec.email         = ["michaelbyrdsemail@gmail.com"]
   spec.summary       = %q{A gem to help create media cards.}

@@ -1,6 +1,6 @@
-require "cards/version"
+require "hack_cards/version"
 
-module Cards
+module HackCards
   class Card
     attr_accessor :text, :url, :image
     def initialize(image: "", text: "", url: "")
