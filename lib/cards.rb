@@ -18,13 +18,8 @@ module Cards
     end
 
     def type
-      if text && url.nil?
-        :text
-      elsif url && text.nil?
-        :url
-      elsif text && url
-        :text_url
-      end
+      string = components.reduce("") {|s, c| s + "_" + c.to_s}
+      string[1..-1].to_sym
     end
   end
 end

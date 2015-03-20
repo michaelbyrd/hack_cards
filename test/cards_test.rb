@@ -28,6 +28,11 @@ class CardsTest < Test::Unit::TestCase
     assert_equal :url, card.type
   end
 
+  def test_multiple_types
+    card = Cards::Card.new(text: "I am some words", url: "www.lmgtfy.com")
+    assert_equal :text_url, card.type
+  end
+
   def test_single_components
     card_one = Cards::Card.new(text: "example")
     assert_equal [:text], card_one.components
