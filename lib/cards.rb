@@ -8,6 +8,13 @@ module Cards
       @url = url if url.length > 0
     end
 
+    def components
+      r = []
+      r << :text if text
+      r << :url if url
+      return r
+    end
+
     def type
       if text && url.nil?
         :text
