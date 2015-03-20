@@ -9,4 +9,9 @@ class CardsTest < Test::Unit::TestCase
     card = Cards::Card.new(text: "test")
     assert_equal "test", card.text
   end
+
+  def test_default_value
+    card = Cards::Card.new
+    assert_equal "", card.text
+  end
 end
