@@ -28,4 +28,17 @@ class CardsTest < Test::Unit::TestCase
     assert_equal :url, card.type
   end
 
+  def test_single_components
+    card_one = Cards::Card.new(text: "example")
+    assert_equal [:text], card_one.components
+
+    card_two = Cards::Card.new(url: "www.hackstarter.com")
+    assert_equal [:url], card_two.components
+  end
+
+  def test_multiple_components
+    card = Cards::Card.new(text: "hey some text", url: "www.imastring.com")
+    assert_equal [:text, :url], card.components
+  end
+
 end
