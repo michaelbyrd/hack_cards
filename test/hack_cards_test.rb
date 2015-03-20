@@ -1,10 +1,6 @@
 require "test_helper"
 
 class HackCardsTest < Test::Unit::TestCase
-  def test_version
-    assert_equal "0.0.1", HackCards::VERSION
-  end
-
   def test_new
     card = HackCards::Card.new(text: "test", url: "www.hackstarter.com")
     assert_equal "test", card.text
