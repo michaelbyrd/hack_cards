@@ -1,8 +1,17 @@
 require "hack_cards/version"
 
+# This is Documentation for the file itself
+
+# This is gem level documentation
 module HackCards
+
+  # This is class level documentation
   class Card
+
+    # text, url, and image are readable and writable fields
     attr_accessor :text, :url, :image
+
+    # this is documentation for the initialize method
     def initialize(image: "", text: "", url: "")
       @image = image if image.length > 0
       @text = text if text.length > 0
