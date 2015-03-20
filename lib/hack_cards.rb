@@ -21,5 +21,9 @@ module HackCards
       string = components.reduce("") {|s, c| s + "_" + c.to_s}
       string[1..-1].to_sym
     end
+
+    def to_html
+      "<p>#{text}</p>"
+    end
   end
 end

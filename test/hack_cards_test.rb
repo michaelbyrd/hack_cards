@@ -9,7 +9,6 @@ class HackCardsTest < Test::Unit::TestCase
     card = HackCards::Card.new(text: "test", url: "www.hackstarter.com")
     assert_equal "test", card.text
     assert_equal "www.hackstarter.com", card.url
-
   end
 
   def test_default_value
@@ -46,4 +45,8 @@ class HackCardsTest < Test::Unit::TestCase
     assert_equal [:text, :url], card.components
   end
 
+  def test_to_html
+    card = HackCards::Card.new(text: "paragraph")
+    assert_equal "<p>paragraph</p>", card.to_html
+  end
 end
