@@ -14,18 +14,18 @@ class CardsTest < Test::Unit::TestCase
 
   def test_default_value
     card = Cards::Card.new
-    assert_equal "", card.text
-    assert_equal "", card.url
+    assert_equal nil, card.text
+    assert_equal nil, card.url
   end
 
   def test_text_only_type
-    card = Card::Card.new(text: "Hello World")
-    assert_equal :text_only, card.type
+    card = Cards::Card.new(text: "Hello World")
+    assert_equal :text, card.type
   end
 
   def test_url_only_type
-    card = Card::Card.new(url: "www.hackstarter.com")
-    assert_equal :url_only, card.type
+    card = Cards::Card.new(url: "www.hackstarter.com")
+    assert_equal :url, card.type
   end
 
 end
