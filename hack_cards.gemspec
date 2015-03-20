@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["michaelbyrdsemail@gmail.com"]
   spec.summary       = %q{A gem to help create media cards.}
   spec.description   = %q{}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/michaelbyrd/hack_cards"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
